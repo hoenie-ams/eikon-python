@@ -7,20 +7,20 @@ Thomson Reuters Eikon (licenced) provides access to real-time market data, news,
 
 ###Steps:
 
-First, download and install the Eikon Scripting Proxy from the [developers portal](https://developers.thomsonreuters.com/) and request an AppID.
+First, download, install and run the Eikon Scripting Proxy from the [developers portal](https://developers.thomsonreuters.com/) and request an AppID.
 
-Install Eikon Python API
+Install Eikon Python API:
 ```
 pip install eikon
 ```
 
-Start and set your AppID
+Start and set your AppID (while the Eikon Scripting Proxy is running):
 ```
 import eikon
 eikon.set_app_id('xxxx')
 ```
 
-Commands
+Commands:
 ```
 eikon.get_symbology()
 eikon.get_news_headlines()
