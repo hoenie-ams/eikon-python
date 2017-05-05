@@ -27,7 +27,6 @@ eikon.get_news_headlines()
 eikon.get_news_story()
 eikon.get_timeseries()
 eikon.get_data()
-eikon.MarketPriceStream()
 ```
 
 ### Licence:
