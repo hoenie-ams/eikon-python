@@ -1,11 +1,11 @@
 # Eikon_Python
-##Python: Thomson Reuters Eikon API
+## Python: Thomson Reuters Eikon API
 
 
-###Overview:
+### Overview:
 Thomson Reuters Eikon (licenced) provides access to real-time market data, news, fundamental and reference data, research and analytics etc. Most of the data available from Eikon can be retrieved programmatically using APIs. These APIs are designed for ease of use and for rapid application development. The APIs could also be utilized in a variety of development environments including Microsoft Visual Studio, Matlab, R, Microsoft Office VBA. Check out https://developers.thomsonreuters.com/ for more information.
 
-###Steps:
+### Steps:
 
 First, download, install and run the Eikon Scripting Proxy from the [developers portal](https://developers.thomsonreuters.com/) and request an AppID.
 
@@ -30,16 +30,16 @@ eikon.get_data()
 eikon.MarketPriceStream()
 ```
 
-###Licence:
+### Licence:
 The Thomson Reuters Eikon end user license agreement prohibits any type of data redistribution. If you require redistribution of data, then you should consider one of the Thomson Reuters Enterprise products. Application developers using Eikon APIs do not need to worry about data entitlements as these are enforced by Eikon and shared with the APIs. 
 
 
-###Requirements:
-- Python 2.7 or higher
+### Requirements:
+- Python 2.7+ or 3.4+
 - Eikon Scripting Proxy
 - EikonID
 
 
 
-###Release Notes:
+### Release Notes:
 -update-
