@@ -13,7 +13,7 @@ Download the Eikon package for Python with pip*:
 ```
 pip install eikon
 ```
-*If you cannot use pip, you can install the package with wheel with the files from: https://pypi.python.org/pypi/eikon
+*If you cannot use pip, you can install the package with wheel (https://pypi.python.org/pypi/eikon)
 
 Start and set your AppID (while the Eikon Scripting Proxy is running):
 ```
