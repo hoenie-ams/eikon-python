@@ -1,4 +1,4 @@
-# Eikon_Python
+# Eikon-Python
 ## Python: Thomson Reuters Eikon API
 
 
