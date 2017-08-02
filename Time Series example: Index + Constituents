@@ -4,7 +4,7 @@ import datetime
 # Example code to build AEX + constituents timeseries
 
 # Set your App ID
-eikon.set_app_id('XXXXXXXXXXXXXXXXXXXXxx')
+eikon.set_app_id('XXXXXXXXXXXXXXXXXXXX')
 
 end = datetime.datetime.now()
 start = end - datetime.timedelta(days=100)
