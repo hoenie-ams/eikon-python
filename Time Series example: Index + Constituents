@@ -6,7 +6,7 @@ Example code to retrieve an index + constituents time series.
 Please define the following three variables
 '''
 
-application_id = 'E4CA3992294C7A83EF06'     # From the "Application ID Generator" in Eikon
+application_id = 'XXXXXXXXXXXXXXXXXXXX'     # From the "Application ID Generator" in Eikon
 index = 'OBX'                               # Name of the index
 number_of_days = 10                         # Number of days of history you would like to receive
 
