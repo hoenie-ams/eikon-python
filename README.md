@@ -7,21 +7,21 @@ The Thomson Reuters Eikon API provides simple access to users who require progra
 
 ### Steps:
 
-First, download, install and run the Eikon Scripting Proxy from the [developers portal](https://developers.thomsonreuters.com/) and request an AppID.
-
-Download the Eikon package for Python with pip*:
+1) Download the Eikon package for Python with pip*:
 ```
 pip install eikon
 ```
 *If you cannot use pip, you can install the package with wheel (https://pypi.python.org/pypi/eikon)
 
-Start and set your AppID (while the Eikon Scripting Proxy is running):
+2) Get your AppID" from the "Application ID Generator" in Eikon (you can find it through the search bar)
+
+3) Import the Eikon Python and set your AppID (while the Eikon is running):
 ```
 import eikon
-eikon.set_app_id('xxxx')
+eikon.set_app_id('xxxxxxxxxxxxxxxxxxxxxxx')
 ```
 
-Now you can use the following commands:
+4) Now you can use the following commands:
 ```
 eikon.get_symbology()
 eikon.get_news_headlines()
