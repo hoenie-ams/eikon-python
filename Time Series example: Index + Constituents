@@ -21,7 +21,7 @@ eikon.set_app_id(application_id)
 end = datetime.datetime.now()
 start = end - datetime.timedelta(days=number_of_days)
 
-# Read AEX into empty dataframe
+# Read the index into empty dataframe
 df_index = eikon.get_timeseries([index_RIC],
                                 start_date=start,
                                 end_date=end,
