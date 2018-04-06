@@ -1,40 +1,48 @@
 import eikon
 import datetime
 
-# Example code to build AEX + constituents timeseries
+'''
+Example code to retrieve an index + constituents time series. 
+Please define the following three variables
+'''
+
+application_id = 'E4CA3992294C7A83EF06'     # From the "Application ID Generator" in Eikon
+index = 'OBX'                               # Name of the index
+number_of_days = 10                         # Number of days of history you would like to receive
+
+#################################################################################################
+# Define the index RIC and the index chain codes
+index_RIC = '.' + index
+index_chain = '0#.' + index
 
 # Set your App ID
-eikon.set_app_id('XXXXXXXXXXXXXXXXXXXX')
+eikon.set_app_id(application_id)
 
 end = datetime.datetime.now()
-start = end - datetime.timedelta(days=100)
+start = end - datetime.timedelta(days=number_of_days)
 
 # Read AEX into empty dataframe
-df_aex = eikon.get_timeseries([".AEX"],
-                          start_date=start,
-                          end_date=end,
-                          fields="close")
+df_index = eikon.get_timeseries([index_RIC],
+                                start_date=start,
+                                end_date=end,
+                                fields='CLOSE')
 
-# Rename "CLOSE" column to ".AEX" to prevent clash
-df_aex = df_aex.rename(columns={"CLOSE": ".AEX"})
+# Rename "CLOSE" column to the index name to prevent clash
+df_index = df_index.rename(columns={'CLOSE': index_RIC})
 
 # Read in more stocks
-symbols = ["AALB.AS", "ABNd.AS", "AEGN.AS", "AD.AS", "AKZO.AS",
-           "ATCA.AS", "MT.AS", "ASML.AS", "BOSN.AS", "GLPG.AS",
-           "GTO.AS", "HEIN.AS", "INGA.AS", "DSMN.AS", "KPN.AS",
-           "NN.AS", "PHG.AS", "RAND.AS", "RELN.AS", "RDSa.AS",
-           "SBMO.AS", "UNBP.AS", "UNc.AS", "VOPA.AS", "WLSNc.AS"]
+symbols = eikon.get_data(index_chain, 'TR.RIC')[0]['RIC']
 
 for symbol in symbols:
     df_temp = eikon.get_timeseries([symbol],
-                                    start_date=start,
-                                    end_date=end,
-                                    fields="close")
+                                   start_date=start,
+                                   end_date=end,
+                                   fields='CLOSE')
     # Rename to prevent clash
-    df_temp= df_temp.rename(columns={'CLOSE': symbol})
-    
+    df_temp = df_temp.rename(columns={'CLOSE': symbol})
+
     # Join the two dataframes
-    df_aex = df_aex.join(df_temp[symbol])
+    df_index = df_index.join(df_temp[symbol])
 
 # Show the output
-df_aex
+print(df_index)
