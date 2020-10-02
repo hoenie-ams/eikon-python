@@ -20,7 +20,7 @@ pip install eikon
 ##### 3) Import the Eikon Python and set your AppID (while the Eikon is running):
 ```
 import eikon
-eikon.set_app_id('xxxxxxxxxxxxxxxxxxxxxxx')
+eikon.set_app_key('xxxxxxxxxxxxxxxxxxxxxxx')
 ```
 
 
