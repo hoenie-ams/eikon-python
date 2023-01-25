@@ -36,7 +36,7 @@ eikon.get_timeseries()
 eikon.get_data()
 ```
 
-##### 5) *EXAMPLE*: Retrieve data for an index and its constituents with `index_plus_constituents_time_series.py`
+##### 5) *EXAMPLE*: Retrieve data for an index and its constituents with [index_plus_constituents_time_series.py](https://github.com/hoenie-ams/Eikon-Python/blob/master/index_plus_constituents_time_series.py)
 
 ### Licence:
 
